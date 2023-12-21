@@ -1,20 +1,21 @@
-import * as React from 'react';
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SendArray from './SendArray';
-import ReceiveArray from './ReceiveArray';
+import ReceivedArray from './ReceiveArray';
 
 const Stack = createNativeStackNavigator();
 
-function ArraySend() {
+function AppArray() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SendArray">
+      <Stack.Navigator initialRouteName="Screen1">
         <Stack.Screen name="SendArray" component={SendArray} />
-        <Stack.Screen name="ReceiveArray" component={ReceiveArray} />
+        <Stack.Screen name="ReceiveArray" component={ReceivedArray} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-export default ArraySend;
+export default AppArray;

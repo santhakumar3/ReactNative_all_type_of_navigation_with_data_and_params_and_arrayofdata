@@ -1,15 +1,15 @@
-import {View, Text, Button} from 'react-native';
 import React from 'react';
+import {View, Text, Button} from 'react-native';
 
 const SendArray = ({navigation}) => {
-  const arrayToSend = [1, 2, 3, 4, 5];
+  const dataArray = [1, 2, 3, 4, 5]; // Your array of data
 
   return (
     <View>
-      <Text>SendArray</Text>
+      <Text>Send Array</Text>
       <Button
-        title="Go To Array Receive page"
-        onPress={() => navigation.navigate('ReceiveArray', {data: arrayToSend})}
+        title="Go to Receive Array "
+        onPress={() => navigation.navigate('ReceiveArray', {dataArray})}
       />
     </View>
   );

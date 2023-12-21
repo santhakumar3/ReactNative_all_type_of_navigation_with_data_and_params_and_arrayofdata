@@ -1,16 +1,17 @@
-import {View, Text, Button} from 'react-native';
 import React from 'react';
+import {View, Text} from 'react-native';
 
-const ReceiveArray = ({route, navigation}) => {
+const ReceivedArray = ({route}) => {
   const {dataArray} = route.params;
+
+  // Use the dataArray in your second screen
+
   return (
     <View>
       <Text>ReceiveArray</Text>
-      {/* Display the data from the array */}
-      <Text>Received Array: {JSON.stringify(dataArray)}</Text>
-      <Button title="Go back to Home" onPress={() => navigation.goBack()} />
+      <Text>Data from SendArray: {JSON.stringify(dataArray)}</Text>
     </View>
   );
 };
 
-export default ReceiveArray;
+export default ReceivedArray;

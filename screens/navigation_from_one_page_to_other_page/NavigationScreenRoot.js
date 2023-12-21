@@ -1,15 +1,16 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from './screens/navigation_from_one_page_to_other_page/HomeScreen';
-import DetailsScreen from './screens/navigation_from_one_page_to_other_page/DetailsScreen';
+import HomeScreen from './HomeScreen';
+import DetailsScreen from './DetailsScreen';
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+function AppNav() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        {/* navigation from one page to other page  */}
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
@@ -17,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppNav;
